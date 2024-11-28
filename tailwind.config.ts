@@ -7,6 +7,9 @@ export default {
         "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     ],
     theme: {
+        container: {
+            padding: "20px",
+        },
         extend: {
             fontFamily: {
                 body: ["Turret_Road", "sans-serif"],
@@ -14,6 +17,7 @@ export default {
             colors: {
                 background: "var(--background)",
                 foreground: "var(--foreground)",
+                "terminal-green": "#4af626",
             },
         },
     },
