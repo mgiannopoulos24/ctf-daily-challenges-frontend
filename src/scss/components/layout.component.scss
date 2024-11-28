@@ -1,3 +1,11 @@
 html {
   @apply font-body;
+
+  body {
+    @apply min-h-screen font-body flex flex-col;
+
+    main {
+      @apply flex-1;
+    }
+  }
 }
