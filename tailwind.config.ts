@@ -8,6 +8,9 @@ export default {
     ],
     theme: {
         extend: {
+            fontFamily: {
+                body: ["Turret_Road", "sans-serif"],
+            },
             colors: {
                 background: "var(--background)",
                 foreground: "var(--foreground)",
