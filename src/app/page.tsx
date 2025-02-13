@@ -1,6 +1,5 @@
-"use client";
 import { permanentRedirect } from "next/navigation";
 
 export default async function Index() {
-  permanentRedirect("/home");
+    permanentRedirect("/home"); // Navigate to the new user profile
 }
