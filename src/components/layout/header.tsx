@@ -3,6 +3,9 @@ import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import Drawer from "@mui/material/Drawer";
 import Checkbox from "@/components/other/checkbox";
+import Image from "next/image";
+import HackerIcon from "@/assets/images/hacker.svg"
+import "@/scss/components/header.component.scss";
 
 export default function Header() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -31,7 +34,9 @@ export default function Header() {
     <header className="bg-black h-[60px] border-b-2 border-terminal-green flex justify-center">
       <nav className="container flex justify-between items-center">
         <div className="flex gap-4 items-center">
-          <div className="bg-red-500 flex justify-center items-center h-[40px] w-[60px] text-xs">Logo</div>
+          <div className="flex justify-center items-center h-[40px] w-[60px] text-xs">
+          <Image className="logo" src={HackerIcon} alt="Hacker Logo"/>
+          </div>
           <div className="hidden md:flex text-terminal-green text-2xl gap-2 items-center font-medium">
             <Link className="p-2" href="/home">
               Home
@@ -67,8 +72,9 @@ export default function Header() {
         open={isDrawerOpen}
         onClose={toggleDrawer(false)} 
         transitionDuration={isFullPage ? 0 : 250} 
+        PaperProps={{ className: 'drawer' }}
       >
-        <div className="flex flex-col text-terminal-green text-2xl gap-4 p-4 bg-black h-full">
+        <div className="flex flex-col text-terminal-green text-2xl gap-4 p-4 bg-black h-full drawer-links">
           <Link className="p-2" href="/home">
             Home
           </Link>
